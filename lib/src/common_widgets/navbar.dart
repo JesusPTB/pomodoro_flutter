@@ -48,6 +48,7 @@ class _NavbarState extends ConsumerState<Navbar> {
         .indexWhere((element) => element.route == widget.currentRoute);
 
     return NavigationBar(
+      // backgroundColor: Colors.transparent,
       selectedIndex: selectedIndex,
       labelBehavior: labelBehavior,
       onDestinationSelected: (int index) {

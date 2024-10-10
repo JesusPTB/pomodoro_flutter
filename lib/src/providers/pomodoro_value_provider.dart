@@ -12,7 +12,7 @@ class PomodoroValue {
 
 final pomodoroValuesProvider = StateProvider<PomodoroValue>(
   (ref) => PomodoroValue(
-    workDuration: const Duration(minutes: 2),
-    breakDuration: const Duration(minutes: 1),
+    workDuration: const Duration(seconds: 45),
+    breakDuration: const Duration(seconds: 15),
   ),
 );
