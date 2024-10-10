@@ -27,6 +27,12 @@ const List<Destination> destinations = <Destination>[
     Icon(Icons.history),
     AppRoute.history,
   ),
+  Destination(
+    'Paramètres',
+    Icon(Icons.settings),
+    Icon(Icons.settings),
+    AppRoute.settings,
+  ),
 ];
 
 class Navbar extends ConsumerStatefulWidget {

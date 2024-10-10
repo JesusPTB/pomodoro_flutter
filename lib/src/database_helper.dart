@@ -32,6 +32,8 @@ class DatabaseHelper {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         workDuration INTEGER,
         breakDuration INTEGER,
+        totalWorkDuration INTEGER,
+        totalBreakDuration INTEGER,
         date TEXT,
         cycleCount INTEGER
       )
@@ -55,6 +57,8 @@ class DatabaseHelper {
       return PomodoroSession(
         workDuration: Duration(seconds: maps[i]['workDuration']),
         breakDuration: Duration(seconds: maps[i]['breakDuration']),
+        totalWorkDuration: Duration(seconds: maps[i]['totalWorkDuration']),
+        totalBreakDuration: Duration(seconds: maps[i]['totalBreakDuration']),
         date: DateTime.parse(maps[i]['date']),
         cycleCount: maps[i]['cycleCount'],
       );

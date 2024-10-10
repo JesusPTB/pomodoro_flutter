@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:pomodoro_flutter/src/model/pomodoro_session.dart';
 import 'package:pomodoro_flutter/src/providers/history_provider.dart';
+import 'package:pomodoro_flutter/src/utils/format_duration.dart';
 
 import '../common_widgets/navbar.dart';
 import '../database_helper.dart';
@@ -15,7 +16,7 @@ class HistoryScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('History'),
+        title: const Text('Historique'),
         actions: [
           IconButton(
               onPressed: () async {
@@ -42,8 +43,17 @@ class HistoryScreen extends ConsumerWidget {
             itemBuilder: (context, index) {
               final session = sortedSessions[index];
               return ListTile(
-                title: Text('Date: ${DateFormat('dd/MM/yyyy HH:mm').format(session.date)}'),
-                subtitle: Text('Cycles: ${session.cycleCount}'),
+                title: Text(
+                    'Travail: ${session.workDuration.inMinutes} minutes, Pause: ${session.breakDuration.inMinutes} minutes'),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Total Travail: ${formatDuration(session.totalWorkDuration)}'),
+                    Text('Total Pause: ${formatDuration(session.totalBreakDuration)}'),
+                    Text('Date: ${DateFormat.yMMMd().format(session.date)}'),
+                    Text('Cycles: ${session.cycleCount}'),
+                  ],
+                ),
               );
             },
           );
