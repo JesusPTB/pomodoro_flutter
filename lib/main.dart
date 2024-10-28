@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pomodoro_flutter/src/pomodoro.dart';
 
+
 void main() {
+  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+  FlutterLocalNotificationsPlugin();
+  flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<
+      AndroidFlutterLocalNotificationsPlugin>()?.requestNotificationsPermission();
   runApp(
     // For widgets to be able to read providers, we need to wrap the entire
     // application in a "ProviderScope" widget.
