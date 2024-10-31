@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "422187559328",
+    "project_id": "pomodoro-ynovm2",
+    "storage_bucket": "pomodoro-ynovm2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422187559328:android:5b2e7282a5cb8b6eb55cc5",
+        "android_client_info": {
+          "package_name": "com.dream_team.pomodoro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByghSOjPlzleQKEfXWyvAZ6Rj7wbKGONY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422187559328:android:52dd1c0ad287c161b55cc5",
+        "android_client_info": {
+          "package_name": "com.example.pomodoro_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByghSOjPlzleQKEfXWyvAZ6Rj7wbKGONY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
